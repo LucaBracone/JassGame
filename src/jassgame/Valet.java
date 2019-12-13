@@ -10,19 +10,10 @@ package jassgame;
  * @author Luca Bracone
  */
 public class Valet extends Carte {
-    void setForce(boolean isAtout, boolean isFond) {
-        if(isAtout) {
-            force= 1;
-        } else if(isFond) {
-            force= 13;
-        }
-        else force= 19;
-    }
-    void setpoints() {
-        points= isAtout ? 20:2;
-    }
     
     public Valet(Couleur couleur) {       
         this.couleur = couleur;
+        forceEnAtout =  1;
+        forceEnFond  =  13;
     }
 }

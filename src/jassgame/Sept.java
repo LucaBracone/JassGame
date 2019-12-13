@@ -10,17 +10,10 @@ package jassgame;
  * @author Luca Bracone
  */
 public class Sept extends Carte {
-    void setForce(boolean isAtout, boolean isFond) {
-            if(isAtout) {
-                force= 8;
-            } else if(isFond) {
-                force= 17;
-            }
-            else force= 19;
-        }
 
-        public Sept(Couleur couleur) {
-            this.couleur = couleur;
-            points = 0;
+    public Sept(Couleur couleur) {
+        this.couleur = couleur;
+        forceEnAtout = 8 ;
+        forceEnFond  = 17 ;
         }
 }

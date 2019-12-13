@@ -9,18 +9,10 @@ package jassgame;
  *
  * @author Luca Bracone
  */
-public class As extends Carte {
-    void setForce(boolean isAtout, boolean isFond) {
-        if(isAtout) {
-            force= 3;
-        } else if(isFond) {
-            force= 10;
-        }
-        else force= 19;
-    }
-    
+public class As extends Carte { 
     public As(Couleur couleur) {
         this.couleur = couleur;
-        points = 11;
+        forceEnAtout = 3 ;
+        forceEnFond  = 10 ;
     }
 }

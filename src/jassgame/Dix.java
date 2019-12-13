@@ -10,18 +10,10 @@ package jassgame;
  * @author Luca Bracone
  */
 public class Dix extends Carte {
-    void setForce(boolean isAtout, boolean isFond) {
-        if(isAtout) {
-            force= 6;
-        } else if(isFond) {
-            force= 14;
-        }
-        else force= 19;
-    }
-    
     public Dix(Couleur couleur) {
         this.couleur = couleur;
-        points = 10;
+        forceEnAtout = 6 ;
+        forceEnFond  =  14;
     }
     
 }

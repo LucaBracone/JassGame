@@ -5,7 +5,6 @@
  */
 package jassgame;
 
-import jassgame.Couleur;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,17 +13,20 @@ import java.util.Scanner;
  * @author Luca Bracone
  */
 class Joueur {
-    Main main;
+    private Main hand;
     String nom;
-    void setMain(List<Carte> main) {
-        this.main = new Main(main);
+    void setHand(List<Carte> main) {
+        this.hand = new Main(main);
+    }
+    Main getHand() {
+        return hand;
     }
     public Joueur(String nom) {
         this.nom = nom;
     }
     
     Couleur selectAtout() {
-        Couleur selection;
+        Couleur selection = Couleur.TREFLES;
         Scanner bob = new Scanner(System.in);
         System.out.println("Selectionner atout. P = piques, T= trèfles, C= coeurs, Q=carreaux ");
         String input;
@@ -33,8 +35,21 @@ class Joueur {
         } while (!"P".equals(input) || !"T".equals(input) || !"C".equals(input) || !"Q".equals(input) );
         switch (input) {
             case "P":
-                selection = PIQUES;
+                selection = Couleur.PIQUES;
+                break;
+            case "T":
+                selection = Couleur.TREFLES;
+                break;
+            case "C":
+                selection = Couleur.COEURS;
+                break;
+            case "Q":
+                selection = Couleur.CARREAUX;
+                break;
         }
         return selection;
+    }
+    Carte playCard(){
+        int selection =0;
     }
 }

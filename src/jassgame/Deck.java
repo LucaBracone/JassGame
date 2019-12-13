@@ -13,7 +13,10 @@ import java.util.List;
  * @author Luca Bracone
  */
 public class Deck {
-    List<Carte> deck;
+    private List<Carte> deck;
+    public  List<Carte> getDeck() {
+        return deck;
+    }
     public Deck() {
         for(Couleur couleur : Couleur.values()) {
             deck.add(new As(couleur));
@@ -28,4 +31,5 @@ public class Deck {
         }
         Collections.shuffle(deck);
     }
+
 }

@@ -11,15 +11,26 @@ package jassgame;
  */
 public class JassGame {
 
-    Joueur joueur1;
-    Joueur joueur2;
-    Joueur joueur3;
-    Joueur joueur4;
-    
-    
     public static void main(String[] args) {
         // TODO code application logic here
-        
+    Joueur joueur1 = null;
+    Joueur joueur2 = null;
+    Joueur joueur3 = null;
+    Joueur joueur4 = null;
+   
+        int pointsEquipeNS = 0;
+        int pointsEquipeEW = 0;
+        int index = 0;
+        while(pointsEquipeNS < 1000 || pointsEquipeEW < 1000) {
+            Manche mancheCourante;
+            mancheCourante = new Manche(index,joueur1,joueur2,joueur3,joueur4);
+            mancheCourante.distribute();
+            mancheCourante.setAtout();
+            
+            
+            
+            index++;
+        }
     }
     
 }

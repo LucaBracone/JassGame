@@ -10,16 +10,9 @@ package jassgame;
  * @author Luca Bracone
  */
 public class Roi extends Carte {
-    void setForce(boolean isAtout, boolean isFond) {
-        if(isAtout) {
-            force= 4;
-        } else if(isFond) {
-            force= 11;
-        }
-        else force= 19;
-    }
     public Roi(Couleur couleur) {
         this.couleur = couleur;
-        points = 4;
+        forceEnAtout = 4 ;
+        forceEnFond  = 11 ;
     }
 }

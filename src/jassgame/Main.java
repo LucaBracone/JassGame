@@ -13,6 +13,9 @@ import java.util.List;
  */
 public class Main {
     List<Carte> main;
+    void discard(int num) {
+        main.remove(num);
+    }
     
     public Main(List<Carte> donne) {
         this.main = donne;
