@@ -9,18 +9,16 @@ package jassgame;
  *
  * @author Luca Bracone
  */
-public class Six extends Carte {
-    void setForce(boolean isAtout, boolean isFond) {
-        if(isAtout) {
-            force= 9;
-        } else if(isFond) {
-            force= 18;
+public class Six extends Carte {   
+    void display() {
+        switch (couleur) {
+            case PIQUES:
+                System.out.println("6P");
         }
-        else force= 19;
     }
-    
     public Six(Couleur couleur) {
         this.couleur = couleur;
-        points = 0;
+        forceEnAtout =  9;
+        forceEnFond  =  18;
     }
 }
