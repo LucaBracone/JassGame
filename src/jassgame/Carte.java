@@ -12,12 +12,16 @@ package jassgame;
 
 public abstract class Carte {
     Couleur couleur;
-    boolean isAtout = false;
-    boolean isFond;
-    int force;
-    int points;
-    public int getForce() {
-        return force;
+    int forceEnAtout;
+    int forceEnFond;
+    
+    int evaluateForce(Couleur atout, Couleur fond) {
+        if(atout == this.couleur) {
+            return forceEnAtout;
+        } else if(fond == this.couleur) {
+            return forceEnFond;
+        }
+        else return 19;
     }
 }
 
