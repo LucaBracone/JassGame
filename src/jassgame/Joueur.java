@@ -15,6 +15,10 @@ import java.util.Scanner;
 class Joueur {
     private Main hand;
     String nom;
+
+    Joueur() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     void setHand(List<Carte> main) {
         this.hand = new Main(main);
     }
@@ -51,5 +55,14 @@ class Joueur {
     }
     Carte playCard(){
         int selection =0;
+        System.out.println("Selectionner carte:");
+        hand.display();
+        Scanner scanner = new Scanner (System.in);
+        do {
+            selection = scanner.nextInt()-1;
+        } while (selection <0 || selection > hand.size()-1);
+        Carte selected = hand.selectCard(selection);
+        hand.discard(selection);
+        return selected;
     }
 }

@@ -16,7 +16,18 @@ public class Main {
     void discard(int num) {
         main.remove(num);
     }
-    
+    void display() {
+        for(Carte toDisplay : main) {
+            toDisplay.display();
+            System.out.print("  ");
+        }
+    }
+    Carte selectCard(int num) {
+        return main.get(num);
+    }
+    int size() {
+        return main.size();
+    }
     public Main(List<Carte> donne) {
         this.main = donne;
     }

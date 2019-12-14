@@ -14,7 +14,7 @@ public abstract class Carte {
     Couleur couleur;
     int forceEnAtout;
     int forceEnFond;
-    
+    abstract void display();
     int evaluateForce(Couleur atout, Couleur fond) {
         if(atout == this.couleur) {
             return forceEnAtout;

@@ -9,8 +9,24 @@ package jassgame;
  *
  * @author Luca Bracone
  */
-public class Sept extends Carte {
-
+public class Sept extends Carte { 
+        @Override
+        void display() {
+        switch (couleur) {
+            case PIQUES:
+                System.out.print("7P");
+                break;
+            case TREFLES:
+                System.out.print("7T");
+                break;
+            case COEURS:
+                System.out.print("7C");
+                break;
+            case CARREAUX:
+                System.out.print("7Q");
+                break;
+        }
+    }
     public Sept(Couleur couleur) {
         this.couleur = couleur;
         forceEnAtout = 8 ;

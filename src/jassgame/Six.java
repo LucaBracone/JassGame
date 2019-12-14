@@ -10,15 +10,28 @@ package jassgame;
  * @author Luca Bracone
  */
 public class Six extends Carte {   
-    void display() {
-        switch (couleur) {
-            case PIQUES:
-                System.out.println("6P");
-        }
-    }
-    public Six(Couleur couleur) {
+     public Six(Couleur couleur) {
         this.couleur = couleur;
         forceEnAtout =  9;
         forceEnFond  =  18;
     }
+     
+    @Override
+    void display() {
+        switch (couleur) {
+            case PIQUES:
+                System.out.print("6P");
+                break;
+            case TREFLES:
+                System.out.print("6T");
+                break;
+            case COEURS:
+                System.out.print("6C");
+                break;
+            case CARREAUX:
+                System.out.print("6Q");
+                break;
+        }
+    }
+   
 }
