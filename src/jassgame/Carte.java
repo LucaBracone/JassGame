@@ -11,9 +11,12 @@ package jassgame;
  */
 
 public abstract class Carte {
-    Couleur couleur;
-    int forceEnAtout;
-    int forceEnFond;
+    protected Couleur couleur;
+    protected int forceEnAtout;
+    protected int forceEnFond;
+    Couleur getCouleur() {
+        return couleur;
+    }
     abstract void display();
     int evaluateForce(Couleur atout, Couleur fond) {
         if(atout == this.couleur) {

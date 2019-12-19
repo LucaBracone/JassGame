@@ -14,14 +14,16 @@ import java.util.List;
 public class Manche {
     int mancheNumber;
     Deck deck;
-    Couleur atout;
+    private Couleur atout;
     Joueur joueur1;
     Joueur joueur2;
     Joueur joueur3;
     Joueur joueur4;
     List<Carte> obtenuEquipeNS;
     List<Carte> obtenuEquipeEW;
-    
+    Couleur getAtout(){
+        return atout;
+    }
     void distribute() {
         joueur1.setHand(deck.getDeck().subList(0,9));
         joueur2.setHand(deck.getDeck().subList(9,18));

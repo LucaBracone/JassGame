@@ -9,9 +9,10 @@ package jassgame;
  *
  * @author Luca Bracone
  */
-public class As extends Carte { 
-        @Override
-        void display() {
+public class As extends Carte {
+
+    @Override
+    void display() {
         switch (couleur) {
             case PIQUES:
                 System.out.print("AP");
@@ -27,9 +28,10 @@ public class As extends Carte {
                 break;
         }
     }
+
     public As(Couleur couleur) {
         this.couleur = couleur;
-        forceEnAtout = 3 ;
-        forceEnFond  = 10 ;
+        forceEnAtout = 3;
+        forceEnFond = 10;
     }
 }

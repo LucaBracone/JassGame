@@ -5,6 +5,7 @@
  */
 package jassgame;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,12 +14,16 @@ import java.util.List;
  * @author Luca Bracone
  */
 public class Deck {
+
     private List<Carte> deck;
-    public  List<Carte> getDeck() {
+
+    public List<Carte> getDeck() {
         return deck;
     }
+
     public Deck() {
-        for(Couleur couleur : Couleur.values()) {
+        deck = new ArrayList<>();
+        for (Couleur couleur : Couleur.values()) {
             deck.add(new As(couleur));
             deck.add(new Roi(couleur));
             deck.add(new Reine(couleur));

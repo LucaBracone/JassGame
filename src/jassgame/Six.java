@@ -9,13 +9,14 @@ package jassgame;
  *
  * @author Luca Bracone
  */
-public class Six extends Carte {   
-     public Six(Couleur couleur) {
+public class Six extends Carte {
+
+    public Six(Couleur couleur) {
         this.couleur = couleur;
-        forceEnAtout =  9;
-        forceEnFond  =  18;
+        forceEnAtout = 9;
+        forceEnFond = 18;
     }
-     
+
     @Override
     void display() {
         switch (couleur) {
@@ -33,5 +34,5 @@ public class Six extends Carte {
                 break;
         }
     }
-   
+
 }

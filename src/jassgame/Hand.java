@@ -11,24 +11,31 @@ import java.util.List;
  *
  * @author Luca Bracone
  */
-public class Main {
-    List<Carte> main;
+public class Hand {
+
+    private List<Carte> main;
+
     void discard(int num) {
         main.remove(num);
     }
+
     void display() {
-        for(Carte toDisplay : main) {
+        for (Carte toDisplay : main) {
             toDisplay.display();
             System.out.print("  ");
         }
+        System.out.print("\n");
     }
-    Carte selectCard(int num) {
-        return main.get(num);
-    }
+
     int size() {
         return main.size();
     }
-    public Main(List<Carte> donne) {
+
+    Carte get(int num) {     
+        return main.get(num);
+    }
+    
+    public Hand(List<Carte> donne) {
         this.main = donne;
     }
 }
